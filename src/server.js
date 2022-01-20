@@ -3,7 +3,7 @@ const serverless = require("serverless-http");
 
 const app = express();
 const cors = require("cors");
-const data = require('./course.json');
+const data = require('../course.json');
 const PORT=8080;
 
 const router = express.Router();
