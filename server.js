@@ -9,12 +9,14 @@ const PORT=8080;
 const router = express.Router();
 
 app.use(cors());
-app.use(`/.netlify/functions/api`, router);
 
-app.get("/jasonData" , (req,res)=>{
+
+router.get("/jasonData" , (req,res)=>{
     // console.log(req.query);
     res.send(data);
 })
+
+app.use(`/.netlify/functions/api`, router);
 
 app.listen(PORT , ()=>{
     console.log(`Server is listening on port ${PORT}`);
